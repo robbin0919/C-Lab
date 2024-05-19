@@ -1,9 +1,9 @@
 {
     "urls": [
-      "https://www.example.com/image1.jpg",
-      "https://www.example.com/image2.png",
-      "https://www.example.com/image3.gif"
+      "https://images2.imgbox.com/66/99/NhAuQujo_o.jpg",
+      "https://images2.imgbox.com/83/62/WP86JjLP_o.jpg",
+      "https://images2.imgbox.com/1e/18/onDPN72o_o.jpg"
     ],
-    "downloadDirectory": "C:\\Images"
+    "downloadDirectory": "D:\\LAB\\Images"
   }
   
