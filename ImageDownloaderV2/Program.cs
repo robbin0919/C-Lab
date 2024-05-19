@@ -8,17 +8,27 @@ namespace ImageDownloaderV2;
 
 class ImageDownloader
 {
-    private readonly string _downloadDirectory;
-
+    private readonly string _downloadDirectory= "D:\\LAB\\Images2"; // Or any other default path 
     public ImageDownloader(string configFilePath)
     {
         var config = JsonConvert.DeserializeObject<Configuration>(File.ReadAllText(configFilePath));
-        _downloadDirectory = config.DownloadDirectory;
+        _downloadDirectory = config?.DownloadDirectory ?? "D:\\LAB\\Images2";
 
-        if (!Directory.Exists(_downloadDirectory))
-        {
-            Directory.CreateDirectory(_downloadDirectory);
-        }
+        
+        if (_downloadDirectory != null)
+            {
+                if (!Directory.Exists(_downloadDirectory))
+                {
+                    Directory.CreateDirectory(_downloadDirectory);
+                }
+            }
+            else
+            {
+                // Handle the case where _downloadDirectory is null
+                //  - Log an error message
+                //  - Throw an exception
+                //  - Provide a default directory
+            }   
     }
 
     public async Task DownloadImagesAsync()
