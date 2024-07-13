@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "nonUTF8FilesLister/1.0.0": {
+        "dependencies": {
+          "ICSharpCode.SharpZipLib.Patched": "1.2.0.9"
+        },
+        "runtime": {
+          "nonUTF8FilesLister.dll": {}
+        }
+      },
+      "ICSharpCode.SharpZipLib.Patched/1.2.0.9": {
+        "runtime": {
+          "lib/netstandard2.0/ICSharpCode.SharpZipLib.dll": {
+            "assemblyVersion": "1.2.0.7",
+            "fileVersion": "1.2.0.7"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "nonUTF8FilesLister/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ICSharpCode.SharpZipLib.Patched/1.2.0.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JRp8z5klRmzZ0wXDC2JApxTigFrjXzN6zOus8KiCj8XzoztOZWgh5Gl1Fl3OXelRn7pDoCwx/6Ai/eU6AohFKA==",
+      "path": "icsharpcode.sharpziplib.patched/1.2.0.9",
+      "hashPath": "icsharpcode.sharpziplib.patched.1.2.0.9.nupkg.sha512"
+    }
+  }
+}
