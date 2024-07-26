@@ -1,5 +1,6 @@
 ﻿using MyLibrary2;
-namespace MyProject2;
+//namespace MyProject2;
+namespace AnotherProject;
 class Program
 {
     static void Main(string[] args)
