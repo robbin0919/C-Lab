@@ -16,3 +16,5 @@ dotnet build
 
 # 在另一個專案中使用 MyLibrary
 dotnet add MyProject reference MyLibrary
+
+https://github.com/pierre3/PlantUmlClassDiagramGenerator  
