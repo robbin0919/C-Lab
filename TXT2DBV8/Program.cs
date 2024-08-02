@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using Oracle.ManagedDataAccess.Client;
 // using System.Linq;
-namespace TXT2DB;
+namespace TXT2DBV8;
 public class Ticket
 {
     public string TicketNumber { get; set; }
