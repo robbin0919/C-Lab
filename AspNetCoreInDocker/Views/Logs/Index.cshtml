@@ -1,0 +1,30 @@
+@model IEnumerable<Log>
+
+<h1>Logs</h1>
+
+<form asp-controller="Logs" asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="Message"></label>
+        <input asp-for="Message" class="form-control" />
+        <span asp-validation-for="Message" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Add</button>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Timestamp</th>
+            <th>Message</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Timestamp)</td>
+                <td>@Html.DisplayFor(modelItem => item.Message)</td>
+            </tr>
+        }
+    </tbody>
+</table>
