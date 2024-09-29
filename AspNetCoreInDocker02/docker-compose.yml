@@ -1,0 +1,9 @@
+version: '3.7'
+services:
+  aspnetcore-in-docker:
+    image: aspnetcore-in-docker
+    container_name: aspnetcore-in-docker
+    ports:
+      - 5000:80
+    volumes:
+      - /D/LAB/C-Lab/AspNetCoreInDocker02/logs.txt:/app/logs.txt
