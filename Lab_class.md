@@ -1,5 +1,5 @@
 * dotnet new console   --framework net6.0 --use-program-main -o MyProject  
-* dotnet new console   --framework net6.0 --use-program-main -o MyLibrary  
+* dotnet new mvc   --framework net6.0   -o MyProject
 * dotnet new classlib --framework net6.0  -o MyLibrary  
 * dotnet add MyProject reference MyLibrary  
 # 建立新專案
