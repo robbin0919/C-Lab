@@ -1,4 +1,6 @@
-這個Repositories是學習C#所作的LAB，如果它為您節省了大量時間，或許能請我喝杯美式咖啡。謝謝！
+## 這個Repositories是學習C#所作的LAB，如果它為您節省了大量時間，或許能請我喝杯美式咖啡。謝謝！
+
+## This Repositories is a LAB made for learning C#. If it saves you a lot of time, maybe you can buy me a cup of Americano. Thanks!
 
 | Lab                                                 | 備註       |         |
 | --------------------------------------------------- | ---------- | ------- |
