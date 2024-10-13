@@ -16,4 +16,5 @@
 |AspNetCoreInDocker03                                 | 實作容器化  | LAB     |
 |Deserialize01                                        | 實作Deserialize  | LAB     |
 |Deserialize02                                        | 實作Deserialize  | LAB     |
+|HelloWorld_webAPI                                    | 實作WEB API  | LAB     |
 |ExpenseAPI                                           | 實作WEB API  | LAB     |
