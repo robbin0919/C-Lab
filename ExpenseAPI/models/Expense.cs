@@ -24,6 +24,6 @@ namespace ExpenseAPI.Models
         public string Category { get; set; }
         public decimal Amount { get; set; }
         public string Remark { get; set; }
-        public string description { get; set; }
+        public string Description { get; set; } 
     }
 }

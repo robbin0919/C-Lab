@@ -13,6 +13,13 @@ builder.Services.AddDbContext<ExpenseContext>(options => options.UseInMemoryData
 
 
 var app = builder.Build();
+// Generate default data
+using (var serviceScope = app.Services.CreateScope())
+{
+    var services = serviceScope.ServiceProvider;
+    DataGenerator.Initialize(services);
+}
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
