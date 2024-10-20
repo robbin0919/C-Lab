@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th,
+    td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    .container {
+      margin: 0 auto;
+      width: 80%;
+    }
+      
+  </style>
+</head>
+
+<body>
+  <div class="container">
+  </div>
+  <script>
+
+    const apiUrl = 'http://localhost:8000/api/Expense';
+
+    const headers = {
+      'Content-Type': 'application/json'
+    };
+    function renderExpense(expense) {
+      console.table(expense);
+      const table = document.querySelector('table');
+      const tr = document.createElement('tr');
+      const tdId = document.createElement('td');
+      const tdDate = document.createElement('td');
+      const tdCategory = document.createElement('td');
+      const tdAmount = document.createElement('td');
+      const tdRemark = document.createElement('td');
+      const tdDescription = document.createElement('td');
+      const tdButton = document.createElement('td');
+      const button = document.createElement('button');
+      button.textContent = '刪除';
+      button.addEventListener('click', () => {
+        deleteExpense(expense.id);
+      });
+      tdId.textContent = expense.id;
+      tdDate.textContent = expense.date;
+      tdCategory.textContent = expense.category;
+      tdAmount.textContent = expense.amount;
+      tdRemark.textContent = expense.remark;
+      tdDescription.textContent = expense.description;
+      tdButton.appendChild(button);
+      tr.appendChild(tdId);
+      tr.appendChild(tdDate);
+      tr.appendChild(tdCategory);
+      tr.appendChild(tdAmount);
+      tr.appendChild(tdRemark);
+      tr.appendChild(tdDescription);
+      tr.appendChild(tdButton);
+      table.appendChild(tr);
+    }
+    function refreshTable() {
+    }
+    function getExpenses() {
+ // 使用以下資料模擬從伺服器取得的資料
+      const expenses = [
+  {
+    "id": 1,
+    "date": "2021-01-01T00:00:00",
+    "category": "早餐",
+    "amount": 100,
+    "remark": "好吃",
+    "description": "早餐吃的香蕉"
+  },
+  {
+    "id": 2,
+    "date": "2021-01-01T00:00:00",
+    "category": "午餐",
+    "amount": 150,
+    "remark": "好吃",
+    "description": "午餐吃的蘋果"
+  },
+  {
+    "id": 3,
+    "date": "2021-01-01T00:00:00",
+    "category": "晚餐",
+    "amount": 200,
+    "remark": "好吃",
+    "description": "晚餐吃的橘子"
+  },
+  {
+    "id": 4,
+    "date": "2021-01-01T00:00:00",
+    "category": "宵夜",
+    "amount": 50,
+    "remark": "好吃",
+    "description": "宵夜吃的葡萄"
+  }
+];
+      expenses.forEach(expense => {
+        renderExpense(expense);
+      });
+    }
+
+ 
+    function postExpense() {
+    }
+    function deleteExpense(id) {
+
+    }
+   const table = document.createElement('table');
+ document.querySelector('.container').appendChild(table);
+    // document.body.appendChild(table);
+    // refreshTable();
+    //document.querySelector("input[type='submit']").addEventListener('click', postExpense);
+    getExpenses();
+  </script>
+</body>
+
+</html>
