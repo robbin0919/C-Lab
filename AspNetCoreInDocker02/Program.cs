@@ -28,7 +28,7 @@
  app.MapPost("/add", (HttpRequest request) =>
  {
      var msg = request.Form["msg"];
-     File.AppendAllText(dataFilePath, $"{DateTime.Now:mm:ss} {msg}{Environment.NewLine}");
+     File.AppendAllText(dataFilePath, $"{DateTime.Now:yyyy-MM-dd HH:mm:ss} {msg}{Environment.NewLine}");
      return Results.Content(@"<script>
      parent.document.getElementsByTagName('iframe')[1].src=
          '/logs?_=' + new Date().getTime();
