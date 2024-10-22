@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th,
+    td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    .container {
+      margin: 0 auto;
+      width: 80%;
+    }
+      
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    } 
+
+
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Expense</h1>
+    <form>  
+      <label for="date">日期</label>
+      <input type="date" id="date" name="date">
+      <label for="category">類別</label>
+      <input type="text" id="category" name="category">
+      <label for="amount">金額</label>
+      <input type="number" id="amount" name="amount">
+      <label for="remark">備註</label>
+      <input type="text" id="remark" name="remark">
+      <label for="description">描述</label>
+      <input type="text" id="description" name="description">
+      <input type="submit" value="新增">
+    </form>
+      </div>
+  <script>
+
+    const apiUrl = 'https://localhost:7063/api/Expense';
+
+    const headers = {
+      'Content-Type': 'application/json'
+    };
+    function renderExpense(expense) {
+      console.table(expense);
+      const table = document.querySelector('table');
+      const tr = document.createElement('tr');
+      const tdId = document.createElement('td');
+      const tdDate = document.createElement('td');
+      const tdCategory = document.createElement('td');
+      const tdAmount = document.createElement('td');
+      const tdRemark = document.createElement('td');
+      const tdDescription = document.createElement('td');
+      const tdButton = document.createElement('td');
+      const button = document.createElement('button');
+      button.textContent = '刪除';
+      button.addEventListener('click', () => {
+        deleteExpense(expense.id);
+      });
+      tdId.textContent = expense.id;
+      tdDate.textContent = expense.date;
+      tdCategory.textContent = expense.category;
+      tdAmount.textContent = expense.amount;
+      tdRemark.textContent = expense.remark;
+      tdDescription.textContent = expense.description;
+      tdButton.appendChild(button);
+      tr.appendChild(tdId);
+      tr.appendChild(tdDate);
+      tr.appendChild(tdCategory);
+      tr.appendChild(tdAmount);
+      tr.appendChild(tdRemark);
+      tr.appendChild(tdDescription);
+      tr.appendChild(tdButton);
+      table.appendChild(tr);
+    }
+    function refreshTable() {
+    }
+    function getExpenses() { 
+      fetch(apiUrl, {
+        method: 'GET',
+        headers: headers
+      })
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);
+          data.forEach(expense => {
+            renderExpense(expense);
+          });
+        });
+     
+    }
+    function postExpense() {   
+    // 取得表單資料，並轉換成 JSON 格式，以便送到伺服器
+    const date = document.querySelector('#date').value;
+    const category = document.querySelector('#category').value;
+    const amount = document.querySelector('#amount').value;
+    const remark = document.querySelector('#remark').value;
+    const description = document.querySelector('#description').value;
+    const expense = {
+      date: date,
+      category: category,
+      amount: amount,
+      remark: remark,
+      description: description
+    };
+    // 透過 fetch 送出 POST 請求
+    fetch(apiUrl, {
+      method: 'POST',
+      headers: headers,
+      body: JSON.stringify(expense)
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+        renderExpense(data);
+      });
+    }
+ 
+  
+    function deleteExpense(id) {
+
+    }
+   const table = document.createElement('table');
+ document.querySelector('.container').appendChild(table);
+    // document.body.appendChild(table);
+    // refreshTable();
+    //document.querySelector("input[type='submit']").addEventListener('click', postExpense);
+    getExpenses();
+  </script>
+</body>
+
+</html>
