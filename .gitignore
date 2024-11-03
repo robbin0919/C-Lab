@@ -47,6 +47,8 @@ AspNetCoreInDocker03/bin/Release/
 ExpenseAPI/obj/
 ExpenseAPI/bin/Debug/
 ExpenseAPI/bin/Release/
+ExpenseAPI2/bin/Debug/
+ExpenseAPI2/bin/Release/
 HelloWorld_webAPI/obj/
 HelloWorld_webAPI/bin/Debug/
 HelloWorld_webAPI/bin/Release/
