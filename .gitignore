@@ -53,3 +53,6 @@ ExpenseAPI2/bin/Release/
 HelloWorld_webAPI/obj/
 HelloWorld_webAPI/bin/Debug/
 HelloWorld_webAPI/bin/Release/
+KestrelWeb/obj/
+KestrelWeb/bin/Debug/
+KestrelWeb/bin/Release/ 
