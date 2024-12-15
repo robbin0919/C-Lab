@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
  var builder = WebApplication.CreateBuilder(args);
- IPAddress ipAddress = IPAddress.Parse("10.10.10.6");
+ IPAddress ipAddress;
  builder.WebHost.ConfigureKestrel(serverOptions =>
 {
 serverOptions.Listen(IPAddress.Any, 5000);
