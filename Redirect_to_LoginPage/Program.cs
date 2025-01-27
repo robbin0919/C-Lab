@@ -1,4 +1,12 @@
+using CustomRedirectDemo.Middleware;
+using CustomRedirectDemo.Models;
+
 var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.Configure<AppSettings>(
+    builder.Configuration.GetSection("AppSettings"));
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -19,6 +27,9 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+
+// 使用自定義的404處理中間件
+app.UseCustom404Redirect();
 
 app.MapControllerRoute(
     name: "default",
