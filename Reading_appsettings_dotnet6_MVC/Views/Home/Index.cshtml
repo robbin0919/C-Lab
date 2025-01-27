@@ -3,6 +3,16 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Configuration Demo</h1>
+    
+    <h2>App Settings</h2>
+    <p>API URL: @ViewBag.ApiUrl</p>
+    <p>Max Items: @ViewBag.MaxItems</p>
+    
+    <h2>Email Settings</h2>
+    <p>SMTP Server: @ViewBag.SmtpServer</p>
+    <p>SMTP Port: @ViewBag.SmtpPort</p>
+    
+    <h2>Connection String</h2>
+    <p>@ViewBag.ConnectionString</p>
 </div>

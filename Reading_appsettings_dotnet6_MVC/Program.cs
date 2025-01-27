@@ -1,8 +1,15 @@
+using ConfigDemo.Models;
+using Microsoft.Extensions.DependencyInjection;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+// 註冊 AppSettings
+builder.Services.Configure<AppSettings>(
+    builder.Configuration.GetSection("AppSettings"));
+    
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

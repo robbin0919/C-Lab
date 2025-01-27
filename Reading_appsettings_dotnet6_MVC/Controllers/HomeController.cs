@@ -1,31 +1,36 @@
-﻿using System.Diagnostics;
-using Microsoft.AspNetCore.Mvc;
-using Reading_appsettings_dotnet6_MVC.Models;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
+using ConfigDemo.Models;
 
-namespace Reading_appsettings_dotnet6_MVC.Controllers;
-
-public class HomeController : Controller
+namespace ConfigDemo.Controllers
 {
-    private readonly ILogger<HomeController> _logger;
-
-    public HomeController(ILogger<HomeController> logger)
+    public class HomeController : Controller
     {
-        _logger = logger;
-    }
+        private readonly AppSettings _appSettings;
+        private readonly IConfiguration _configuration;
 
-    public IActionResult Index()
-    {
-        return View();
-    }
+        public HomeController(
+            IOptions<AppSettings> appSettings,
+            IConfiguration configuration)
+        {
+            _appSettings = appSettings.Value;
+            _configuration = configuration;
+        }
 
-    public IActionResult Privacy()
-    {
-        return View();
-    }
+        public IActionResult Index()
+        {
+            // 方法1：使用強型別設定
+            ViewBag.ApiUrl = _appSettings.ApiUrl;
+            ViewBag.MaxItems = _appSettings.MaxItems;
+            ViewBag.SmtpServer = _appSettings.EmailSettings.SmtpServer;
 
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
-    {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            // 方法2：直接從 IConfiguration 讀取
+            ViewBag.ConnectionString = _configuration.GetConnectionString("DefaultConnection");
+            
+            // 方法3：使用字串路徑讀取
+            ViewBag.SmtpPort = _configuration["AppSettings:EmailSettings:SmtpPort"];
+
+            return View();
+        }
     }
 }
