@@ -56,3 +56,6 @@ HelloWorld_webAPI/bin/Release/
 KestrelWeb/obj/
 KestrelWeb/bin/Debug/
 KestrelWeb/bin/Release/ 
+Reading_appsettings_dotnet6_MVC/obj/
+Reading_appsettings_dotnet6_MVC/bin/Debug/
+Reading_appsettings_dotnet6_MVC/bin/Release/ 
