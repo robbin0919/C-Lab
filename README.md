@@ -18,3 +18,5 @@
 |Deserialize02                                        | 實作Deserialize  | LAB     |
 |HelloWorld_webAPI                                    | 實作WEB API，容器化  | LAB     |
 |ExpenseAPI                                           | 實作WEB API  | LAB     |
+|Redirect_to_LoginPage                                | 實作WEB MVC 轉址  | LAB     |
+|Reading_appsettings_dotnet6_MVC                      | 實作WEB MVC 讀取appsettings | LAB     |
