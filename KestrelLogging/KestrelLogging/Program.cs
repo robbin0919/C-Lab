@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
+//=======================================================
 // 設定 Serilog
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Debug()
@@ -38,7 +38,7 @@ builder.WebHost.ConfigureKestrel(options =>
         endpoint.UseConnectionLogging();
     });
 });
-
+//=======================================================
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
