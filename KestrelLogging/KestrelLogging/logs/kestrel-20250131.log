@@ -1,0 +1,88 @@
+2025-01-31 16:54:08.679 +08:00 [INF] User profile is available. Using 'C:\Users\robbin0919\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-31 16:54:08.726 +08:00 [INF] Creating key {d610ba32-4036-47ac-b207-109518cf8345} with creation date 2025-01-31 08:54:08Z, activation date 2025-01-31 08:54:08Z, and expiration date 2025-05-01 08:54:08Z.
+2025-01-31 16:54:09.420 +08:00 [INF] Writing data to file 'C:\Users\robbin0919\AppData\Local\ASP.NET\DataProtection-Keys\key-d610ba32-4036-47ac-b207-109518cf8345.xml'.
+2025-01-31 16:54:09.444 +08:00 [WRN] Overriding address(es) 'https://localhost:7253, http://localhost:5041'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-01-31 16:54:09.452 +08:00 [INF] Now listening on: http://[::]:5000
+2025-01-31 16:54:09.453 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-31 16:54:09.454 +08:00 [INF] Hosting environment: Development
+2025-01-31 16:54:09.455 +08:00 [INF] Content root path: D:\LAB\C-Lab\KestrelLogging\KestrelLogging\
+2025-01-31 16:54:41.391 +08:00 [DBG] Connection id "0HNA1QJJ9AESG" accepted.
+2025-01-31 16:54:41.394 +08:00 [DBG] Connection id "0HNA1QJJ9AESG" started.
+2025-01-31 16:54:41.432 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/ - -
+2025-01-31 16:54:41.438 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-01-31 16:54:41.448 +08:00 [INF] Executing endpoint 'KestrelLogging.Controllers.HomeController.Index (KestrelLogging)'
+2025-01-31 16:54:41.469 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller KestrelLogging.Controllers.HomeController (KestrelLogging).
+2025-01-31 16:54:41.479 +08:00 [INF] Executing ViewResult, running view Index.
+2025-01-31 16:54:41.529 +08:00 [INF] Executed ViewResult - view Index executed in 49.6443ms.
+2025-01-31 16:54:41.531 +08:00 [INF] Executed action KestrelLogging.Controllers.HomeController.Index (KestrelLogging) in 60.5113ms
+2025-01-31 16:54:41.532 +08:00 [INF] Executed endpoint 'KestrelLogging.Controllers.HomeController.Index (KestrelLogging)'
+2025-01-31 16:54:41.533 +08:00 [DBG] Connection id "0HNA1QJJ9AESG" completed keep alive response.
+2025-01-31 16:54:41.537 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/ - - - 200 - text/html;+charset=utf-8 108.1146ms
+2025-01-31 16:54:41.550 +08:00 [DBG] Connection id "0HNA1QJJ9AESH" accepted.
+2025-01-31 16:54:41.551 +08:00 [DBG] Connection id "0HNA1QJJ9AESH" started.
+2025-01-31 16:54:41.552 +08:00 [DBG] Connection id "0HNA1QJJ9AESI" accepted.
+2025-01-31 16:54:41.553 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/css/site.css?v=AKvNjO3dCPPS0eSU1Ez8T2wI280i08yGycV9ndytL-c - -
+2025-01-31 16:54:41.553 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.min.css - -
+2025-01-31 16:54:41.554 +08:00 [DBG] Connection id "0HNA1QJJ9AESI" started.
+2025-01-31 16:54:41.554 +08:00 [DBG] Connection id "0HNA1QJJ9AESJ" accepted.
+2025-01-31 16:54:41.556 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/KestrelLogging.styles.css?v=Xak5WqyLk4M8c1_McIFr1G6bT2P8L7fio-mcYfm2N2Y - -
+2025-01-31 16:54:41.557 +08:00 [DBG] Connection id "0HNA1QJJ9AESJ" started.
+2025-01-31 16:54:41.557 +08:00 [DBG] Connection id "0HNA1QJJ9AESK" accepted.
+2025-01-31 16:54:41.559 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.min.js - -
+2025-01-31 16:54:41.560 +08:00 [DBG] Connection id "0HNA1QJJ9AESK" started.
+2025-01-31 16:54:41.560 +08:00 [DBG] Connection id "0HNA1QJJ9AESL" accepted.
+2025-01-31 16:54:41.562 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.bundle.min.js - -
+2025-01-31 16:54:41.563 +08:00 [DBG] Connection id "0HNA1QJJ9AESL" started.
+2025-01-31 16:54:41.565 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - -
+2025-01-31 16:54:41.566 +08:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'D:\LAB\C-Lab\KestrelLogging\KestrelLogging\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2025-01-31 16:54:41.566 +08:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'D:\LAB\C-Lab\KestrelLogging\KestrelLogging\wwwroot\lib\jquery\dist\jquery.min.js'
+2025-01-31 16:54:41.566 +08:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'D:\LAB\C-Lab\KestrelLogging\KestrelLogging\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2025-01-31 16:54:41.566 +08:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'D:\LAB\C-Lab\KestrelLogging\KestrelLogging\wwwroot\js\site.js'
+2025-01-31 16:54:41.566 +08:00 [INF] Sending file. Request path: '/KestrelLogging.styles.css'. Physical path: 'D:\LAB\C-Lab\KestrelLogging\KestrelLogging\obj\Debug\net6.0\scopedcss\bundle\KestrelLogging.styles.css'
+2025-01-31 16:54:41.567 +08:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'D:\LAB\C-Lab\KestrelLogging\KestrelLogging\wwwroot\css\site.css'
+2025-01-31 16:54:41.568 +08:00 [DBG] Connection id "0HNA1QJJ9AESG" completed keep alive response.
+2025-01-31 16:54:41.568 +08:00 [DBG] Connection id "0HNA1QJJ9AESJ" completed keep alive response.
+2025-01-31 16:54:41.569 +08:00 [DBG] Connection id "0HNA1QJJ9AESK" completed keep alive response.
+2025-01-31 16:54:41.570 +08:00 [DBG] Connection id "0HNA1QJJ9AESL" completed keep alive response.
+2025-01-31 16:54:41.571 +08:00 [DBG] Connection id "0HNA1QJJ9AESI" completed keep alive response.
+2025-01-31 16:54:41.572 +08:00 [DBG] Connection id "0HNA1QJJ9AESH" completed keep alive response.
+2025-01-31 16:54:41.573 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.min.css - - - 200 162720 text/css 19.7523ms
+2025-01-31 16:54:41.573 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.min.js - - - 200 89476 application/javascript 14.7018ms
+2025-01-31 16:54:41.574 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 200 78468 application/javascript 12.4133ms
+2025-01-31 16:54:41.575 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 200 230 application/javascript 10.2988ms
+2025-01-31 16:54:41.576 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/KestrelLogging.styles.css?v=Xak5WqyLk4M8c1_McIFr1G6bT2P8L7fio-mcYfm2N2Y - - - 200 1131 text/css 19.5568ms
+2025-01-31 16:54:41.576 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/css/site.css?v=AKvNjO3dCPPS0eSU1Ez8T2wI280i08yGycV9ndytL-c - - - 200 194 text/css 23.6298ms
+2025-01-31 16:54:41.660 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/favicon.ico - -
+2025-01-31 16:54:41.662 +08:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'D:\LAB\C-Lab\KestrelLogging\KestrelLogging\wwwroot\favicon.ico'
+2025-01-31 16:54:41.663 +08:00 [DBG] Connection id "0HNA1QJJ9AESL" completed keep alive response.
+2025-01-31 16:54:41.664 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/favicon.ico - - - 200 5430 image/x-icon 4.5200ms
+2025-01-31 16:54:48.840 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/ddd - -
+2025-01-31 16:54:48.841 +08:00 [DBG] Connection id "0HNA1QJJ9AESL" completed keep alive response.
+2025-01-31 16:54:48.842 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/ddd - - - 404 0 - 2.3257ms
+2025-01-31 16:56:28.193 +08:00 [INF] Application is shutting down...
+2025-01-31 16:56:28.198 +08:00 [DBG] Connection id "0HNA1QJJ9AESJ" disconnecting.
+2025-01-31 16:56:28.198 +08:00 [DBG] Connection id "0HNA1QJJ9AESI" disconnecting.
+2025-01-31 16:56:28.198 +08:00 [DBG] Connection id "0HNA1QJJ9AESH" disconnecting.
+2025-01-31 16:56:28.198 +08:00 [DBG] Connection id "0HNA1QJJ9AESL" disconnecting.
+2025-01-31 16:56:28.198 +08:00 [DBG] Connection id "0HNA1QJJ9AESK" disconnecting.
+2025-01-31 16:56:28.199 +08:00 [DBG] Connection id "0HNA1QJJ9AESG" disconnecting.
+2025-01-31 16:56:28.199 +08:00 [DBG] Connection id "0HNA1QJJ9AESJ" stopped.
+2025-01-31 16:56:28.199 +08:00 [DBG] Connection id "0HNA1QJJ9AESI" stopped.
+2025-01-31 16:56:28.199 +08:00 [DBG] Connection id "0HNA1QJJ9AESH" stopped.
+2025-01-31 16:56:28.200 +08:00 [DBG] Connection id "0HNA1QJJ9AESL" stopped.
+2025-01-31 16:56:28.200 +08:00 [DBG] Connection id "0HNA1QJJ9AESK" stopped.
+2025-01-31 16:56:28.201 +08:00 [DBG] Connection id "0HNA1QJJ9AESG" stopped.
+2025-01-31 16:56:28.202 +08:00 [DBG] Connection id "0HNA1QJJ9AESJ" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-01-31 16:56:28.202 +08:00 [DBG] Connection id "0HNA1QJJ9AESI" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-01-31 16:56:28.203 +08:00 [DBG] Connection id "0HNA1QJJ9AESH" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-01-31 16:56:28.203 +08:00 [DBG] Connection id "0HNA1QJJ9AESL" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-01-31 16:56:28.204 +08:00 [DBG] Connection id "0HNA1QJJ9AESK" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-01-31 16:56:28.204 +08:00 [DBG] Connection id "0HNA1QJJ9AESG" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-01-31 16:56:40.582 +08:00 [INF] User profile is available. Using 'C:\Users\robbin0919\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-31 16:56:40.680 +08:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 66B5F26258AB34F99F28A688F4FC316E94648ACA)
+2025-01-31 16:56:40.701 +08:00 [INF] Now listening on: https://localhost:7253
+2025-01-31 16:56:40.701 +08:00 [INF] Now listening on: http://localhost:5041
+2025-01-31 16:56:40.704 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-31 16:56:40.705 +08:00 [INF] Hosting environment: Development
+2025-01-31 16:56:40.705 +08:00 [INF] Content root path: D:\LAB\C-Lab\KestrelLogging\KestrelLogging\
+2025-01-31 16:56:51.422 +08:00 [INF] Application is shutting down...

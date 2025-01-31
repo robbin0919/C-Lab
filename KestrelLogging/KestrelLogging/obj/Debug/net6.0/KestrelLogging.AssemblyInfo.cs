@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KestrelLogging")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8b868a4a66865589711a200e9f296b5a193bb28a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dae7ae541dc348d7b9248fd12dc3a56725316123")]
 [assembly: System.Reflection.AssemblyProductAttribute("KestrelLogging")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KestrelLogging")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
