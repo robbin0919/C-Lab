@@ -24,8 +24,8 @@ Log.Logger = new LoggerConfiguration()
 
 builder.Host.UseSerilog();
 
-// 加入 MVC 服務
-builder.Services.AddControllersWithViews();
+// 加入 MVC 服務（可能是多餘的）
+//builder.Services.AddControllersWithViews();
 
 // 設定 Kestrel 伺服器選項
 builder.WebHost.ConfigureKestrel(options =>
