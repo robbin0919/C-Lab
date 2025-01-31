@@ -28,16 +28,16 @@ builder.Host.UseSerilog();
 //builder.Services.AddControllersWithViews();
 
 // 設定 Kestrel 伺服器選項
-builder.WebHost.ConfigureKestrel(options =>
-{
+//builder.WebHost.ConfigureKestrel(options =>
+//{
    // options.ListenAnyIP(5000);
     
     // 啟用詳細的連接日誌
-    options.ConfigureEndpointDefaults(endpoint =>
-    {
-        endpoint.UseConnectionLogging();
-    });
-});
+ //   options.ConfigureEndpointDefaults(endpoint =>
+ //   {
+ //       endpoint.UseConnectionLogging();
+ //   });
+//});
 //=======================================================
 var app = builder.Build();
 

@@ -1,0 +1,65 @@
+2025-02-01 02:07:32.860 +08:00 [INF] User profile is available. Using 'C:\Users\robbin0919\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-02-01 02:07:32.963 +08:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 66B5F26258AB34F99F28A688F4FC316E94648ACA)
+2025-02-01 02:07:32.986 +08:00 [INF] Now listening on: https://localhost:7253
+2025-02-01 02:07:32.987 +08:00 [INF] Now listening on: http://localhost:5041
+2025-02-01 02:07:32.990 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-01 02:07:32.990 +08:00 [INF] Hosting environment: Development
+2025-02-01 02:07:32.991 +08:00 [INF] Content root path: D:\LAB\C-Lab\KestrelLogging\KestrelLogging\
+2025-02-01 02:07:46.434 +08:00 [DBG] Connection id "0HNA248L6I8CF" accepted.
+2025-02-01 02:07:46.435 +08:00 [DBG] Connection id "0HNA248L6I8CF" started.
+2025-02-01 02:07:46.469 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5041/ - -
+2025-02-01 02:07:46.479 +08:00 [INF] Executing endpoint 'KestrelLogging.Controllers.HomeController.Index (KestrelLogging)'
+2025-02-01 02:07:46.500 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller KestrelLogging.Controllers.HomeController (KestrelLogging).
+2025-02-01 02:07:46.511 +08:00 [INF] Executing ViewResult, running view Index.
+2025-02-01 02:07:46.562 +08:00 [INF] Executed ViewResult - view Index executed in 51.6839ms.
+2025-02-01 02:07:46.565 +08:00 [INF] Executed action KestrelLogging.Controllers.HomeController.Index (KestrelLogging) in 63.8563ms
+2025-02-01 02:07:46.566 +08:00 [INF] Executed endpoint 'KestrelLogging.Controllers.HomeController.Index (KestrelLogging)'
+2025-02-01 02:07:46.567 +08:00 [DBG] Connection id "0HNA248L6I8CF" completed keep alive response.
+2025-02-01 02:07:46.569 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5041/ - - - 200 - text/html;+charset=utf-8 102.9677ms
+2025-02-01 02:07:46.582 +08:00 [DBG] Connection id "0HNA248L6I8CG" accepted.
+2025-02-01 02:07:46.583 +08:00 [DBG] Connection id "0HNA248L6I8CG" started.
+2025-02-01 02:07:46.583 +08:00 [DBG] Connection id "0HNA248L6I8CH" accepted.
+2025-02-01 02:07:46.584 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5041/lib/bootstrap/dist/css/bootstrap.min.css - -
+2025-02-01 02:07:46.584 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5041/css/site.css?v=AKvNjO3dCPPS0eSU1Ez8T2wI280i08yGycV9ndytL-c - -
+2025-02-01 02:07:46.584 +08:00 [DBG] Connection id "0HNA248L6I8CH" started.
+2025-02-01 02:07:46.585 +08:00 [DBG] Connection id "0HNA248L6I8CI" accepted.
+2025-02-01 02:07:46.586 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5041/KestrelLogging.styles.css?v=Xak5WqyLk4M8c1_McIFr1G6bT2P8L7fio-mcYfm2N2Y - -
+2025-02-01 02:07:46.587 +08:00 [DBG] Connection id "0HNA248L6I8CI" started.
+2025-02-01 02:07:46.587 +08:00 [DBG] Connection id "0HNA248L6I8CJ" accepted.
+2025-02-01 02:07:46.588 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5041/lib/jquery/dist/jquery.min.js - -
+2025-02-01 02:07:46.589 +08:00 [DBG] Connection id "0HNA248L6I8CJ" started.
+2025-02-01 02:07:46.589 +08:00 [DBG] Connection id "0HNA248L6I8CK" accepted.
+2025-02-01 02:07:46.591 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5041/lib/bootstrap/dist/js/bootstrap.bundle.min.js - -
+2025-02-01 02:07:46.591 +08:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'D:\LAB\C-Lab\KestrelLogging\KestrelLogging\wwwroot\css\site.css'
+2025-02-01 02:07:46.591 +08:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'D:\LAB\C-Lab\KestrelLogging\KestrelLogging\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2025-02-01 02:07:46.591 +08:00 [INF] Sending file. Request path: '/KestrelLogging.styles.css'. Physical path: 'D:\LAB\C-Lab\KestrelLogging\KestrelLogging\obj\Debug\net6.0\scopedcss\bundle\KestrelLogging.styles.css'
+2025-02-01 02:07:46.591 +08:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'D:\LAB\C-Lab\KestrelLogging\KestrelLogging\wwwroot\lib\jquery\dist\jquery.min.js'
+2025-02-01 02:07:46.592 +08:00 [DBG] Connection id "0HNA248L6I8CK" started.
+2025-02-01 02:07:46.593 +08:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'D:\LAB\C-Lab\KestrelLogging\KestrelLogging\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2025-02-01 02:07:46.593 +08:00 [DBG] Connection id "0HNA248L6I8CG" completed keep alive response.
+2025-02-01 02:07:46.594 +08:00 [DBG] Connection id "0HNA248L6I8CF" completed keep alive response.
+2025-02-01 02:07:46.594 +08:00 [DBG] Connection id "0HNA248L6I8CH" completed keep alive response.
+2025-02-01 02:07:46.595 +08:00 [DBG] Connection id "0HNA248L6I8CI" completed keep alive response.
+2025-02-01 02:07:46.596 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5041/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - -
+2025-02-01 02:07:46.597 +08:00 [DBG] Connection id "0HNA248L6I8CJ" completed keep alive response.
+2025-02-01 02:07:46.597 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5041/css/site.css?v=AKvNjO3dCPPS0eSU1Ez8T2wI280i08yGycV9ndytL-c - - - 200 194 text/css 13.3974ms
+2025-02-01 02:07:46.598 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5041/lib/bootstrap/dist/css/bootstrap.min.css - - - 200 162720 text/css 14.7586ms
+2025-02-01 02:07:46.599 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5041/KestrelLogging.styles.css?v=Xak5WqyLk4M8c1_McIFr1G6bT2P8L7fio-mcYfm2N2Y - - - 200 1131 text/css 13.1727ms
+2025-02-01 02:07:46.600 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5041/lib/jquery/dist/jquery.min.js - - - 200 89476 application/javascript 11.7937ms
+2025-02-01 02:07:46.601 +08:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'D:\LAB\C-Lab\KestrelLogging\KestrelLogging\wwwroot\js\site.js'
+2025-02-01 02:07:46.601 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5041/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 200 78468 application/javascript 9.9141ms
+2025-02-01 02:07:46.603 +08:00 [DBG] Connection id "0HNA248L6I8CK" completed keep alive response.
+2025-02-01 02:07:46.604 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5041/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 200 230 application/javascript 8.8114ms
+2025-02-01 02:07:46.707 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5041/favicon.ico - -
+2025-02-01 02:07:46.709 +08:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'D:\LAB\C-Lab\KestrelLogging\KestrelLogging\wwwroot\favicon.ico'
+2025-02-01 02:07:46.710 +08:00 [DBG] Connection id "0HNA248L6I8CK" completed keep alive response.
+2025-02-01 02:07:46.710 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5041/favicon.ico - - - 200 5430 image/x-icon 2.9785ms
+2025-02-01 02:07:55.559 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5041/Home/Privacy - -
+2025-02-01 02:07:55.560 +08:00 [INF] Executing endpoint 'KestrelLogging.Controllers.HomeController.Privacy (KestrelLogging)'
+2025-02-01 02:07:55.562 +08:00 [INF] Route matched with {action = "Privacy", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Privacy() on controller KestrelLogging.Controllers.HomeController (KestrelLogging).
+2025-02-01 02:07:55.564 +08:00 [INF] Executing ViewResult, running view Privacy.
+2025-02-01 02:07:55.568 +08:00 [INF] Executed ViewResult - view Privacy executed in 4.3302ms.
+2025-02-01 02:07:55.569 +08:00 [INF] Executed action KestrelLogging.Controllers.HomeController.Privacy (KestrelLogging) in 5.5402ms
+2025-02-01 02:07:55.569 +08:00 [INF] Executed endpoint 'KestrelLogging.Controllers.HomeController.Privacy (KestrelLogging)'
+2025-02-01 02:07:55.570 +08:00 [DBG] Connection id "0HNA248L6I8CK" completed keep alive response.
+2025-02-01 02:07:55.571 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5041/Home/Privacy - - - 200 - text/html;+charset=utf-8 12.1437ms
