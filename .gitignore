@@ -62,3 +62,6 @@ Reading_appsettings_dotnet6_MVC/bin/Release/
 Redirect_to_LoginPage/obj/
 Redirect_to_LoginPage/bin/Debug/
 Redirect_to_LoginPage/bin/Release/ 
+KestrelLogging/obj/
+KestrelLogging/bin/Debug/
+KestrelLogging/bin/Release/ 
