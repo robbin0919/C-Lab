@@ -1,4 +1,14 @@
+ using Serilog;
+
 var builder = WebApplication.CreateBuilder(args);
+
+// 設定 Serilog
+builder.Host.UseSerilog((context, services, configuration) => configuration
+    .ReadFrom.Configuration(context.Configuration)
+    .ReadFrom.Services(services)
+    .Enrich.FromLogContext()
+    .Enrich.WithMachineName()
+    .Enrich.WithThreadId());
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
