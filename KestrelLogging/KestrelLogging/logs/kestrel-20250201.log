@@ -63,3 +63,180 @@
 2025-02-01 02:07:55.569 +08:00 [INF] Executed endpoint 'KestrelLogging.Controllers.HomeController.Privacy (KestrelLogging)'
 2025-02-01 02:07:55.570 +08:00 [DBG] Connection id "0HNA248L6I8CK" completed keep alive response.
 2025-02-01 02:07:55.571 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5041/Home/Privacy - - - 200 - text/html;+charset=utf-8 12.1437ms
+2025-02-01 19:30:00.138 +08:00 [INF] User profile is available. Using 'C:\Users\robbi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-02-01 19:30:00.950 +08:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 78BFAA687BDC1FBF82DB07AB14297FE43EDCC235)
+2025-02-01 19:30:01.120 +08:00 [INF] Now listening on: https://localhost:7253
+2025-02-01 19:30:01.125 +08:00 [INF] Now listening on: http://localhost:5041
+2025-02-01 19:30:01.131 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-01 19:30:01.132 +08:00 [INF] Hosting environment: Development
+2025-02-01 19:30:01.133 +08:00 [INF] Content root path: F:\LAB\C-Lab\KestrelLogging\KestrelLogging\
+2025-02-01 19:30:06.064 +08:00 [DBG] Connection id "0HNA2MF3EU24G" accepted.
+2025-02-01 19:30:06.067 +08:00 [DBG] Connection id "0HNA2MF3EU24G" started.
+2025-02-01 19:30:06.068 +08:00 [DBG] Connection id "0HNA2MF3EU24H" accepted.
+2025-02-01 19:30:06.072 +08:00 [DBG] Connection id "0HNA2MF3EU24H" started.
+2025-02-01 19:30:06.141 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5041/ - -
+2025-02-01 19:30:06.158 +08:00 [INF] Executing endpoint 'KestrelLogging.Controllers.HomeController.Index (KestrelLogging)'
+2025-02-01 19:30:06.193 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller KestrelLogging.Controllers.HomeController (KestrelLogging).
+2025-02-01 19:30:06.213 +08:00 [INF] Executing ViewResult, running view Index.
+2025-02-01 19:30:06.321 +08:00 [INF] Executed ViewResult - view Index executed in 106.7111ms.
+2025-02-01 19:30:06.326 +08:00 [INF] Executed action KestrelLogging.Controllers.HomeController.Index (KestrelLogging) in 125.8759ms
+2025-02-01 19:30:06.330 +08:00 [INF] Executed endpoint 'KestrelLogging.Controllers.HomeController.Index (KestrelLogging)'
+2025-02-01 19:30:06.335 +08:00 [DBG] Connection id "0HNA2MF3EU24G" completed keep alive response.
+2025-02-01 19:30:06.343 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5041/ - - - 200 - text/html;+charset=utf-8 206.5484ms
+2025-02-01 19:30:06.368 +08:00 [DBG] Connection id "0HNA2MF3EU24I" accepted.
+2025-02-01 19:30:06.370 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5041/css/site.css?v=AKvNjO3dCPPS0eSU1Ez8T2wI280i08yGycV9ndytL-c - -
+2025-02-01 19:30:06.371 +08:00 [DBG] Connection id "0HNA2MF3EU24I" started.
+2025-02-01 19:30:06.372 +08:00 [DBG] Connection id "0HNA2MF3EU24J" accepted.
+2025-02-01 19:30:06.375 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5041/KestrelLogging.styles.css?v=Xak5WqyLk4M8c1_McIFr1G6bT2P8L7fio-mcYfm2N2Y - -
+2025-02-01 19:30:06.377 +08:00 [DBG] Connection id "0HNA2MF3EU24J" started.
+2025-02-01 19:30:06.378 +08:00 [DBG] Connection id "0HNA2MF3EU24K" accepted.
+2025-02-01 19:30:06.378 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5041/lib/bootstrap/dist/css/bootstrap.min.css - -
+2025-02-01 19:30:06.384 +08:00 [INF] Sending file. Request path: '/KestrelLogging.styles.css'. Physical path: 'F:\LAB\C-Lab\KestrelLogging\KestrelLogging\obj\Debug\net6.0\scopedcss\bundle\KestrelLogging.styles.css'
+2025-02-01 19:30:06.382 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5041/lib/jquery/dist/jquery.min.js - -
+2025-02-01 19:30:06.383 +08:00 [DBG] Connection id "0HNA2MF3EU24K" started.
+2025-02-01 19:30:06.383 +08:00 [DBG] Connection id "0HNA2MF3EU24L" accepted.
+2025-02-01 19:30:06.381 +08:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'F:\LAB\C-Lab\KestrelLogging\KestrelLogging\wwwroot\css\site.css'
+2025-02-01 19:30:06.386 +08:00 [DBG] Connection id "0HNA2MF3EU24I" completed keep alive response.
+2025-02-01 19:30:06.390 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5041/lib/bootstrap/dist/js/bootstrap.bundle.min.js - -
+2025-02-01 19:30:06.391 +08:00 [DBG] Connection id "0HNA2MF3EU24L" started.
+2025-02-01 19:30:06.393 +08:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'F:\LAB\C-Lab\KestrelLogging\KestrelLogging\wwwroot\lib\jquery\dist\jquery.min.js'
+2025-02-01 19:30:06.393 +08:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'F:\LAB\C-Lab\KestrelLogging\KestrelLogging\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2025-02-01 19:30:06.394 +08:00 [DBG] Connection id "0HNA2MF3EU24H" completed keep alive response.
+2025-02-01 19:30:06.396 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5041/KestrelLogging.styles.css?v=Xak5WqyLk4M8c1_McIFr1G6bT2P8L7fio-mcYfm2N2Y - - - 200 1131 text/css 21.3207ms
+2025-02-01 19:30:06.399 +08:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'F:\LAB\C-Lab\KestrelLogging\KestrelLogging\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2025-02-01 19:30:06.400 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5041/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - -
+2025-02-01 19:30:06.402 +08:00 [DBG] Connection id "0HNA2MF3EU24J" completed keep alive response.
+2025-02-01 19:30:06.403 +08:00 [DBG] Connection id "0HNA2MF3EU24G" completed keep alive response.
+2025-02-01 19:30:06.404 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5041/css/site.css?v=AKvNjO3dCPPS0eSU1Ez8T2wI280i08yGycV9ndytL-c - - - 200 194 text/css 34.2463ms
+2025-02-01 19:30:06.407 +08:00 [DBG] Connection id "0HNA2MF3EU24K" completed keep alive response.
+2025-02-01 19:30:06.408 +08:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'F:\LAB\C-Lab\KestrelLogging\KestrelLogging\wwwroot\js\site.js'
+2025-02-01 19:30:06.409 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5041/lib/jquery/dist/jquery.min.js - - - 200 89478 application/javascript 26.9392ms
+2025-02-01 19:30:06.410 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5041/lib/bootstrap/dist/css/bootstrap.min.css - - - 200 162726 text/css 32.2097ms
+2025-02-01 19:30:06.411 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5041/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 200 78474 application/javascript 21.6448ms
+2025-02-01 19:30:06.412 +08:00 [DBG] Connection id "0HNA2MF3EU24L" completed keep alive response.
+2025-02-01 19:30:06.416 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5041/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 200 230 application/javascript 16.3006ms
+2025-02-01 19:30:06.694 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5041/favicon.ico - -
+2025-02-01 19:30:06.697 +08:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'F:\LAB\C-Lab\KestrelLogging\KestrelLogging\wwwroot\favicon.ico'
+2025-02-01 19:30:06.699 +08:00 [DBG] Connection id "0HNA2MF3EU24K" completed keep alive response.
+2025-02-01 19:30:06.701 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5041/favicon.ico - - - 200 5430 image/x-icon 6.7335ms
+2025-02-01 19:30:11.809 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5041/ - -
+2025-02-01 19:30:11.811 +08:00 [INF] Executing endpoint 'KestrelLogging.Controllers.HomeController.Index (KestrelLogging)'
+2025-02-01 19:30:11.813 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller KestrelLogging.Controllers.HomeController (KestrelLogging).
+2025-02-01 19:30:11.816 +08:00 [INF] Executing ViewResult, running view Index.
+2025-02-01 19:30:11.823 +08:00 [INF] Executed ViewResult - view Index executed in 7.8425ms.
+2025-02-01 19:30:11.827 +08:00 [INF] Executed action KestrelLogging.Controllers.HomeController.Index (KestrelLogging) in 11.9542ms
+2025-02-01 19:30:11.830 +08:00 [INF] Executed endpoint 'KestrelLogging.Controllers.HomeController.Index (KestrelLogging)'
+2025-02-01 19:30:11.833 +08:00 [DBG] Connection id "0HNA2MF3EU24K" completed keep alive response.
+2025-02-01 19:30:11.837 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5041/ - - - 200 - text/html;+charset=utf-8 27.4291ms
+2025-02-01 19:30:11.880 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5041/KestrelLogging.styles.css?v=Xak5WqyLk4M8c1_McIFr1G6bT2P8L7fio-mcYfm2N2Y - -
+2025-02-01 19:30:11.895 +08:00 [INF] The file /KestrelLogging.styles.css was not modified
+2025-02-01 19:30:11.897 +08:00 [DBG] Connection id "0HNA2MF3EU24K" completed keep alive response.
+2025-02-01 19:30:11.901 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5041/KestrelLogging.styles.css?v=Xak5WqyLk4M8c1_McIFr1G6bT2P8L7fio-mcYfm2N2Y - - - 304 - text/css 20.4830ms
+2025-02-01 19:30:13.317 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5041/Home/Privacy - -
+2025-02-01 19:30:13.320 +08:00 [INF] Executing endpoint 'KestrelLogging.Controllers.HomeController.Privacy (KestrelLogging)'
+2025-02-01 19:30:13.323 +08:00 [INF] Route matched with {action = "Privacy", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Privacy() on controller KestrelLogging.Controllers.HomeController (KestrelLogging).
+2025-02-01 19:30:13.328 +08:00 [INF] Executing ViewResult, running view Privacy.
+2025-02-01 19:30:13.337 +08:00 [INF] Executed ViewResult - view Privacy executed in 10.9749ms.
+2025-02-01 19:30:13.341 +08:00 [INF] Executed action KestrelLogging.Controllers.HomeController.Privacy (KestrelLogging) in 15.0643ms
+2025-02-01 19:30:13.344 +08:00 [INF] Executed endpoint 'KestrelLogging.Controllers.HomeController.Privacy (KestrelLogging)'
+2025-02-01 19:30:13.346 +08:00 [DBG] Connection id "0HNA2MF3EU24K" completed keep alive response.
+2025-02-01 19:30:13.349 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5041/Home/Privacy - - - 200 - text/html;+charset=utf-8 32.5510ms
+2025-02-01 19:30:19.826 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5041/ - -
+2025-02-01 19:30:19.828 +08:00 [INF] Executing endpoint 'KestrelLogging.Controllers.HomeController.Index (KestrelLogging)'
+2025-02-01 19:30:19.830 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller KestrelLogging.Controllers.HomeController (KestrelLogging).
+2025-02-01 19:30:19.835 +08:00 [INF] Executing ViewResult, running view Index.
+2025-02-01 19:30:19.840 +08:00 [INF] Executed ViewResult - view Index executed in 5.5379ms.
+2025-02-01 19:30:19.845 +08:00 [INF] Executed action KestrelLogging.Controllers.HomeController.Index (KestrelLogging) in 10.569ms
+2025-02-01 19:30:19.849 +08:00 [INF] Executed endpoint 'KestrelLogging.Controllers.HomeController.Index (KestrelLogging)'
+2025-02-01 19:30:19.853 +08:00 [DBG] Connection id "0HNA2MF3EU24K" completed keep alive response.
+2025-02-01 19:30:19.857 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5041/ - - - 200 - text/html;+charset=utf-8 31.4695ms
+2025-02-01 19:30:19.897 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5041/KestrelLogging.styles.css?v=Xak5WqyLk4M8c1_McIFr1G6bT2P8L7fio-mcYfm2N2Y - -
+2025-02-01 19:30:19.900 +08:00 [INF] The file /KestrelLogging.styles.css was not modified
+2025-02-01 19:30:19.903 +08:00 [DBG] Connection id "0HNA2MF3EU24K" completed keep alive response.
+2025-02-01 19:30:19.907 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5041/KestrelLogging.styles.css?v=Xak5WqyLk4M8c1_McIFr1G6bT2P8L7fio-mcYfm2N2Y - - - 304 - text/css 9.9633ms
+2025-02-01 19:30:23.374 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5041/ - -
+2025-02-01 19:30:23.379 +08:00 [INF] Executing endpoint 'KestrelLogging.Controllers.HomeController.Index (KestrelLogging)'
+2025-02-01 19:30:23.383 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller KestrelLogging.Controllers.HomeController (KestrelLogging).
+2025-02-01 19:30:23.389 +08:00 [INF] Executing ViewResult, running view Index.
+2025-02-01 19:30:23.395 +08:00 [INF] Executed ViewResult - view Index executed in 6.0625ms.
+2025-02-01 19:30:23.399 +08:00 [INF] Executed action KestrelLogging.Controllers.HomeController.Index (KestrelLogging) in 10.5568ms
+2025-02-01 19:30:23.404 +08:00 [INF] Executed endpoint 'KestrelLogging.Controllers.HomeController.Index (KestrelLogging)'
+2025-02-01 19:30:23.406 +08:00 [DBG] Connection id "0HNA2MF3EU24K" completed keep alive response.
+2025-02-01 19:30:23.409 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5041/ - - - 200 - text/html;+charset=utf-8 34.2408ms
+2025-02-01 19:30:23.442 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5041/KestrelLogging.styles.css?v=Xak5WqyLk4M8c1_McIFr1G6bT2P8L7fio-mcYfm2N2Y - -
+2025-02-01 19:30:23.446 +08:00 [INF] The file /KestrelLogging.styles.css was not modified
+2025-02-01 19:30:23.451 +08:00 [DBG] Connection id "0HNA2MF3EU24K" completed keep alive response.
+2025-02-01 19:30:23.455 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5041/KestrelLogging.styles.css?v=Xak5WqyLk4M8c1_McIFr1G6bT2P8L7fio-mcYfm2N2Y - - - 304 - text/css 12.1723ms
+2025-02-01 19:30:32.960 +08:00 [INF] Application is shutting down...
+2025-02-01 19:30:32.972 +08:00 [DBG] Connection id "0HNA2MF3EU24K" disconnecting.
+2025-02-01 19:30:32.972 +08:00 [DBG] Connection id "0HNA2MF3EU24I" disconnecting.
+2025-02-01 19:30:32.973 +08:00 [DBG] Connection id "0HNA2MF3EU24J" disconnecting.
+2025-02-01 19:30:32.973 +08:00 [DBG] Connection id "0HNA2MF3EU24L" disconnecting.
+2025-02-01 19:30:32.973 +08:00 [DBG] Connection id "0HNA2MF3EU24H" disconnecting.
+2025-02-01 19:30:32.973 +08:00 [DBG] Connection id "0HNA2MF3EU24G" disconnecting.
+2025-02-01 19:30:32.976 +08:00 [DBG] Connection id "0HNA2MF3EU24I" stopped.
+2025-02-01 19:30:32.979 +08:00 [DBG] Connection id "0HNA2MF3EU24K" stopped.
+2025-02-01 19:30:32.981 +08:00 [DBG] Connection id "0HNA2MF3EU24J" stopped.
+2025-02-01 19:30:32.983 +08:00 [DBG] Connection id "0HNA2MF3EU24L" stopped.
+2025-02-01 19:30:32.983 +08:00 [DBG] Connection id "0HNA2MF3EU24H" stopped.
+2025-02-01 19:30:32.984 +08:00 [DBG] Connection id "0HNA2MF3EU24G" stopped.
+2025-02-01 19:30:32.987 +08:00 [DBG] Connection id "0HNA2MF3EU24I" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-02-01 19:30:32.987 +08:00 [DBG] Connection id "0HNA2MF3EU24J" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-02-01 19:30:32.987 +08:00 [DBG] Connection id "0HNA2MF3EU24L" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-02-01 19:30:32.987 +08:00 [DBG] Connection id "0HNA2MF3EU24K" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-02-01 19:30:32.989 +08:00 [DBG] Connection id "0HNA2MF3EU24H" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-02-01 19:30:32.991 +08:00 [DBG] Connection id "0HNA2MF3EU24G" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-02-01 19:32:17.831 +08:00== Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager ==[INF] User profile is available. Using 'C:\Users\robbi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-02-01 19:32:18.501 +08:00== Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer ==[DBG] Using development certificate: CN=localhost (Thumbprint: 78BFAA687BDC1FBF82DB07AB14297FE43EDCC235)
+2025-02-01 19:32:18.609 +08:00== Microsoft.Hosting.Lifetime ==[INF] Now listening on: https://localhost:7253
+2025-02-01 19:32:18.614 +08:00== Microsoft.Hosting.Lifetime ==[INF] Now listening on: http://localhost:5041
+2025-02-01 19:32:18.618 +08:00== Microsoft.Hosting.Lifetime ==[INF] Application started. Press Ctrl+C to shut down.
+2025-02-01 19:32:18.619 +08:00== Microsoft.Hosting.Lifetime ==[INF] Hosting environment: Development
+2025-02-01 19:32:18.620 +08:00== Microsoft.Hosting.Lifetime ==[INF] Content root path: F:\LAB\C-Lab\KestrelLogging\KestrelLogging\
+2025-02-01 19:32:44.255 +08:00== Microsoft.AspNetCore.Server.Kestrel.Connections ==[DBG] Connection id "0HNA2MGIJIG40" accepted.
+2025-02-01 19:32:44.260 +08:00== Microsoft.AspNetCore.Server.Kestrel.Connections ==[DBG] Connection id "0HNA2MGIJIG40" started.
+2025-02-01 19:32:44.406 +08:00== Microsoft.AspNetCore.Server.Kestrel.Connections ==[DBG] Connection id "0HNA2MGIJIG41" accepted.
+2025-02-01 19:32:44.409 +08:00== Microsoft.AspNetCore.Server.Kestrel.Connections ==[DBG] Connection id "0HNA2MGIJIG41" started.
+2025-02-01 19:32:44.518 +08:00== Microsoft.AspNetCore.Hosting.Diagnostics ==[INF] Request starting HTTP/1.1 GET http://localhost:5041/ - -
+2025-02-01 19:32:44.541 +08:00== Microsoft.AspNetCore.Routing.EndpointMiddleware ==[INF] Executing endpoint 'KestrelLogging.Controllers.HomeController.Index (KestrelLogging)'
+2025-02-01 19:32:44.599 +08:00== Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ==[INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller KestrelLogging.Controllers.HomeController (KestrelLogging).
+2025-02-01 19:32:44.621 +08:00== Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor ==[INF] Executing ViewResult, running view Index.
+2025-02-01 19:32:44.724 +08:00== Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor ==[INF] Executed ViewResult - view Index executed in 100.2353ms.
+2025-02-01 19:32:44.734 +08:00== Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ==[INF] Executed action KestrelLogging.Controllers.HomeController.Index (KestrelLogging) in 127.6314ms
+2025-02-01 19:32:44.737 +08:00== Microsoft.AspNetCore.Routing.EndpointMiddleware ==[INF] Executed endpoint 'KestrelLogging.Controllers.HomeController.Index (KestrelLogging)'
+2025-02-01 19:32:44.741 +08:00== Microsoft.AspNetCore.Server.Kestrel.Connections ==[DBG] Connection id "0HNA2MGIJIG40" completed keep alive response.
+2025-02-01 19:32:44.753 +08:00== Microsoft.AspNetCore.Hosting.Diagnostics ==[INF] Request finished HTTP/1.1 GET http://localhost:5041/ - - - 200 - text/html;+charset=utf-8 242.1338ms
+2025-02-01 19:32:44.790 +08:00== Microsoft.AspNetCore.Hosting.Diagnostics ==[INF] Request starting HTTP/1.1 GET http://localhost:5041/KestrelLogging.styles.css?v=Xak5WqyLk4M8c1_McIFr1G6bT2P8L7fio-mcYfm2N2Y - -
+2025-02-01 19:32:44.812 +08:00== Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware ==[INF] Sending file. Request path: '/KestrelLogging.styles.css'. Physical path: 'F:\LAB\C-Lab\KestrelLogging\KestrelLogging\obj\Debug\net6.0\scopedcss\bundle\KestrelLogging.styles.css'
+2025-02-01 19:32:44.817 +08:00== Microsoft.AspNetCore.Server.Kestrel.Connections ==[DBG] Connection id "0HNA2MGIJIG40" completed keep alive response.
+2025-02-01 19:32:44.823 +08:00== Microsoft.AspNetCore.Hosting.Diagnostics ==[INF] Request finished HTTP/1.1 GET http://localhost:5041/KestrelLogging.styles.css?v=Xak5WqyLk4M8c1_McIFr1G6bT2P8L7fio-mcYfm2N2Y - - - 200 1131 text/css 33.4765ms
+2025-02-01 19:32:46.340 +08:00== Microsoft.AspNetCore.Hosting.Diagnostics ==[INF] Request starting HTTP/1.1 GET http://localhost:5041/Home/Privacy - -
+2025-02-01 19:32:46.344 +08:00== Microsoft.AspNetCore.Routing.EndpointMiddleware ==[INF] Executing endpoint 'KestrelLogging.Controllers.HomeController.Privacy (KestrelLogging)'
+2025-02-01 19:32:46.349 +08:00== Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ==[INF] Route matched with {action = "Privacy", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Privacy() on controller KestrelLogging.Controllers.HomeController (KestrelLogging).
+2025-02-01 19:32:46.359 +08:00== Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor ==[INF] Executing ViewResult, running view Privacy.
+2025-02-01 19:32:46.366 +08:00== Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor ==[INF] Executed ViewResult - view Privacy executed in 8.779ms.
+2025-02-01 19:32:46.368 +08:00== Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ==[INF] Executed action KestrelLogging.Controllers.HomeController.Privacy (KestrelLogging) in 12.7288ms
+2025-02-01 19:32:46.370 +08:00== Microsoft.AspNetCore.Routing.EndpointMiddleware ==[INF] Executed endpoint 'KestrelLogging.Controllers.HomeController.Privacy (KestrelLogging)'
+2025-02-01 19:32:46.373 +08:00== Microsoft.AspNetCore.Server.Kestrel.Connections ==[DBG] Connection id "0HNA2MGIJIG40" completed keep alive response.
+2025-02-01 19:32:46.375 +08:00== Microsoft.AspNetCore.Hosting.Diagnostics ==[INF] Request finished HTTP/1.1 GET http://localhost:5041/Home/Privacy - - - 200 - text/html;+charset=utf-8 34.0840ms
+2025-02-01 19:32:50.722 +08:00== Microsoft.AspNetCore.Hosting.Diagnostics ==[INF] Request starting HTTP/1.1 GET http://localhost:5041/Home/Privacy - -
+2025-02-01 19:32:50.725 +08:00== Microsoft.AspNetCore.Routing.EndpointMiddleware ==[INF] Executing endpoint 'KestrelLogging.Controllers.HomeController.Privacy (KestrelLogging)'
+2025-02-01 19:32:50.726 +08:00== Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ==[INF] Route matched with {action = "Privacy", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Privacy() on controller KestrelLogging.Controllers.HomeController (KestrelLogging).
+2025-02-01 19:32:50.728 +08:00== Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor ==[INF] Executing ViewResult, running view Privacy.
+2025-02-01 19:32:50.733 +08:00== Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor ==[INF] Executed ViewResult - view Privacy executed in 4.3291ms.
+2025-02-01 19:32:50.736 +08:00== Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker ==[INF] Executed action KestrelLogging.Controllers.HomeController.Privacy (KestrelLogging) in 7.5639ms
+2025-02-01 19:32:50.738 +08:00== Microsoft.AspNetCore.Routing.EndpointMiddleware ==[INF] Executed endpoint 'KestrelLogging.Controllers.HomeController.Privacy (KestrelLogging)'
+2025-02-01 19:32:50.739 +08:00== Microsoft.AspNetCore.Server.Kestrel.Connections ==[DBG] Connection id "0HNA2MGIJIG40" completed keep alive response.
+2025-02-01 19:32:50.741 +08:00== Microsoft.AspNetCore.Hosting.Diagnostics ==[INF] Request finished HTTP/1.1 GET http://localhost:5041/Home/Privacy - - - 200 - text/html;+charset=utf-8 19.6638ms
+2025-02-01 19:32:50.781 +08:00== Microsoft.AspNetCore.Hosting.Diagnostics ==[INF] Request starting HTTP/1.1 GET http://localhost:5041/KestrelLogging.styles.css?v=Xak5WqyLk4M8c1_McIFr1G6bT2P8L7fio-mcYfm2N2Y - -
+2025-02-01 19:32:50.783 +08:00== Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware ==[INF] The file /KestrelLogging.styles.css was not modified
+2025-02-01 19:32:50.784 +08:00== Microsoft.AspNetCore.Server.Kestrel.Connections ==[DBG] Connection id "0HNA2MGIJIG40" completed keep alive response.
+2025-02-01 19:32:50.786 +08:00== Microsoft.AspNetCore.Hosting.Diagnostics ==[INF] Request finished HTTP/1.1 GET http://localhost:5041/KestrelLogging.styles.css?v=Xak5WqyLk4M8c1_McIFr1G6bT2P8L7fio-mcYfm2N2Y - - - 304 - text/css 5.4350ms
+2025-02-01 19:33:44.776 +08:00== Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets ==[DBG] Connection id "0HNA2MGIJIG41" received FIN.
+2025-02-01 19:33:44.781 +08:00== Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets ==[DBG] Connection id "0HNA2MGIJIG41" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-02-01 19:33:44.786 +08:00== Microsoft.AspNetCore.Server.Kestrel.Connections ==[DBG] Connection id "0HNA2MGIJIG41" disconnecting.
+2025-02-01 19:33:44.790 +08:00== Microsoft.AspNetCore.Server.Kestrel.Connections ==[DBG] Connection id "0HNA2MGIJIG41" stopped.
+2025-02-01 19:34:35.993 +08:00== Microsoft.Hosting.Lifetime ==[INF] Application is shutting down...
+2025-02-01 19:34:36.001 +08:00== Microsoft.AspNetCore.Server.Kestrel.Connections ==[DBG] Connection id "0HNA2MGIJIG40" disconnecting.
+2025-02-01 19:34:36.003 +08:00== Microsoft.AspNetCore.Server.Kestrel.Connections ==[DBG] Connection id "0HNA2MGIJIG40" stopped.
+2025-02-01 19:34:36.005 +08:00== Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets ==[DBG] Connection id "0HNA2MGIJIG40" sending FIN because: "The Socket transport's send loop completed gracefully."
