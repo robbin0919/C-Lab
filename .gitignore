@@ -65,3 +65,6 @@ Redirect_to_LoginPage/bin/Release/
 KestrelLogging/KestrelLogging/obj/
 KestrelLogging/KestrelLogging/bin/Debug/
 KestrelLogging/KestrelLogging/bin/Release/ 
+Logging_kestrel_ap/obj/
+Logging_kestrel_ap/bin/Debug/
+Logging_kestrel_ap/bin/Release/ 
