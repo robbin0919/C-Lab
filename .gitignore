@@ -68,3 +68,6 @@ KestrelLogging/KestrelLogging/bin/Release/
 Logging_kestrel_ap/obj/
 Logging_kestrel_ap/bin/Debug/
 Logging_kestrel_ap/bin/Release/ 
+EncryptorTool/obj/
+EncryptorTool/bin/Debug/
+EncryptorTool/bin/Release/ 
