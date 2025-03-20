@@ -54,7 +54,8 @@ namespace EncryptorTool
             }
 
             string command = args[0].ToLower();
-            string encryptionKey = Environment.GetEnvironmentVariable("ENCRYPTION_KEY") ?? "DefaultEncryptionKey";
+            // 使用 EncryptionConstants 中的方法取得加密金鑰
+            string encryptionKey = EncryptionConstants.GetEncryptionKey();
 
             switch (command)
             {
@@ -109,7 +110,7 @@ namespace EncryptorTool
             Console.Write("請輸入加密金鑰 (若為空則使用預設值): ");
             string key = Console.ReadLine().Trim();
             if (string.IsNullOrEmpty(key))
-                key = "DefaultEncryptionKey";
+                key = EncryptionConstants.DefaultEncryptionKey;
 
             Console.Write("請輸入要加密的連線字串: ");
             string connectionString = Console.ReadLine();
@@ -121,7 +122,7 @@ namespace EncryptorTool
             Console.WriteLine(encrypted);
             Console.WriteLine("\nDocker環境變數設定:");
             Console.WriteLine($"ENV ConnectionStrings__EncryptedConnection=\"{encrypted}\"");
-            Console.WriteLine($"ENV ENCRYPTION_KEY=\"{key}\"");
+            Console.WriteLine($"ENV {EncryptionConstants.EncryptionKeyEnvironmentVariable}=\"{key}\"");
         }
 
         private static void DecryptString()
@@ -129,7 +130,7 @@ namespace EncryptorTool
             Console.Write("請輸入加密金鑰 (若為空則使用預設值): ");
             string key = Console.ReadLine().Trim();
             if (string.IsNullOrEmpty(key))
-                key = "DefaultEncryptionKey";
+                key = EncryptionConstants.DefaultEncryptionKey;
 
             Console.Write("請輸入要解密的連線字串: ");
             string encryptedString = Console.ReadLine();
@@ -172,7 +173,7 @@ namespace EncryptorTool
                         string encrypted = encryptor.Encrypt(property.Value.GetString());
                         Console.WriteLine($"ENV ConnectionStrings__{property.Name}=\"{encrypted}\"");
                     }
-                    Console.WriteLine($"ENV ENCRYPTION_KEY=\"{key}\"");
+                    Console.WriteLine($"ENV {EncryptionConstants.EncryptionKeyEnvironmentVariable}=\"{key}\"");
 
                     // 為了簡單起見，這裡只生成Docker環境變數設定，不修改原檔案
                     Console.WriteLine($"\n環境變數配置已生成。請將這些設定加入到您的Dockerfile或docker-compose.yml中。");

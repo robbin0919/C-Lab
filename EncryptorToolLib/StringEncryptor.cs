@@ -10,6 +10,10 @@ namespace EncryptorToolLib
         private readonly byte[] _key;
         private readonly byte[] _iv;
 
+        /// <summary>
+        /// 使用指定金鑰初始化加密工具
+        /// </summary>
+        /// <param name="key">加密金鑰</param>
         public StringEncryptor(string key)
         {
             using (var sha = SHA256.Create())
@@ -20,6 +24,13 @@ namespace EncryptorToolLib
                 _iv = new byte[16];
                 Array.Copy(_key, 0, _iv, 0, 16);
             }
+        }
+
+        /// <summary>
+        /// 使用預設金鑰初始化加密工具
+        /// </summary>
+        public StringEncryptor() : this(EncryptionConstants.GetEncryptionKey())
+        {
         }
 
         public string Encrypt(string plainText)
