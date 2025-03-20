@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Text.Json;
+using EncryptorToolLib;
 
 namespace EncryptorTool
 {
@@ -172,10 +173,6 @@ namespace EncryptorTool
                         Console.WriteLine($"ENV ConnectionStrings__{property.Name}=\"{encrypted}\"");
                     }
                     Console.WriteLine($"ENV ENCRYPTION_KEY=\"{key}\"");
-
-                    string outputFilePath = Path.Combine(
-                        Path.GetDirectoryName(filePath),
-                        Path.GetFileNameWithoutExtension(filePath) + ".encrypted.json");
 
                     // 為了簡單起見，這裡只生成Docker環境變數設定，不修改原檔案
                     Console.WriteLine($"\n環境變數配置已生成。請將這些設定加入到您的Dockerfile或docker-compose.yml中。");

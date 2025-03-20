@@ -3,7 +3,7 @@ using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace EncryptorTool
+namespace EncryptorToolLib
 {
     public class StringEncryptor
     {
