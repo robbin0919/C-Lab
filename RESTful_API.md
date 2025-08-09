@@ -210,6 +210,231 @@ sequenceDiagram
     Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
     ```
 
+#### JWT Bearer Token 實作範例 (ASP.NET Core)
+
+JWT (JSON Web Token) 是目前最流行的跨域驗證解決方案之一。它是一個緊湊且獨立的標準，用於在各方之間安全地傳輸資訊 (稱為 "claims")。以下是在 ASP.NET Core 中實作它的完整步驟。
+
+**核心流程:**
+
+1.  **使用者登入**: 使用者提供帳號密碼。
+2.  **伺服器驗證**: 伺服器驗證帳密是否正確。
+3.  **核發 Token**: 驗證成功後，伺服器產生一個包含使用者資訊 (Claims) 的 JWT，並將其回傳給客戶端。
+4.  **客戶端儲存 Token**: 客戶端 (如瀏覽器) 儲存此 Token。
+5.  **發送請求**: 未來所有對受保護資源的請求，客戶端都必須在 HTTP Header 的 `Authorization` 欄位中攜帶此 Token。
+6.  **伺服器驗證 Token**: 伺服器收到請求後，會驗證 Token 的簽章是否有效、是否過期，如果驗證通過，則允許存取。
+
+---
+
+**步驟 1: 安裝 NuGet 套件**
+
+首先，在你的專案中安裝 JWT Bearer 的官方套件。
+
+```bash
+dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer
+```
+
+---
+
+**步驟 2: 設定 `appsettings.json`**
+
+在 `appsettings.json` 中加入 JWT 相關的設定。金鑰 (Key) **絕對不能**外洩，且長度應該足夠長以確保安全。
+
+```json
+{
+  "Jwt": {
+    "Issuer": "https://yourdomain.com",
+    "Audience": "https://yourapi.yourdomain.com",
+    "Key": "THIS IS A SUPER SECRET KEY THAT SHOULD BE LONG AND COMPLEX"
+  }
+}
+```
+*   `Issuer`: Token 的核發者。
+*   `Audience`: Token 的接收者 (你的 API)。
+*   `Key`: 用於簽署 Token 的密鑰。
+
+---
+
+**步驟 3: 在 `Program.cs` 中設定驗證服務**
+
+這是最核心的步驟，我們需要告訴 ASP.NET Core 如何驗證傳入的 JWT。
+
+```csharp
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// 1. 從 appsettings.json 讀取 JWT 設定
+var jwtSettings = builder.Configuration.GetSection("Jwt");
+var key = Encoding.ASCII.GetBytes(jwtSettings["Key"]);
+
+// 2. 加入驗證服務
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+.AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        // 驗證發行者
+        ValidateIssuer = true,
+        ValidIssuer = jwtSettings["Issuer"],
+
+        // 驗證接收者
+        ValidateAudience = true,
+        ValidAudience = jwtSettings["Audience"],
+
+        // 驗證生命週期
+        ValidateLifetime = true,
+
+        // 驗證簽署金鑰
+        ValidateIssuerSigningKey = true,
+        IssuerSigningKey = new SymmetricSecurityKey(key)
+    };
+});
+
+// 加入授權服務 (如果需要用到 Roles)
+builder.Services.AddAuthorization();
+
+var app = builder.Build();
+
+// 3. 將驗證和授權中介軟體加入管線
+// !! 注意：UseAuthentication() 必須在 UseAuthorization() 之前 !!
+app.UseAuthentication();
+app.UseAuthorization();
+
+app.MapControllers();
+app.Run();
+```
+
+---
+
+**步驟 4: 建立一個端點來核發 Token**
+
+我們需要一個 API 端點 (例如 `POST /api/auth/login`) 來讓使用者登入並獲取 Token。
+
+```csharp
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
+
+[ApiController]
+[Route("api/[controller]")]
+public class AuthController : ControllerBase
+{
+    private readonly IConfiguration _config;
+
+    public AuthController(IConfiguration config)
+    {
+        _config = config;
+    }
+
+    [HttpPost("login")]
+    public IActionResult Login([FromBody] UserLogin model)
+    {
+        // **此處應替換為真實的資料庫驗證邏輯**
+        if (model.Username == "test" && model.Password == "password")
+        {
+            var token = GenerateJwtToken(model.Username);
+            return Ok(new { token });
+        }
+
+        return Unauthorized("Invalid credentials");
+    }
+
+    private string GenerateJwtToken(string username)
+    {
+        // 讀取 appsettings.json 中的 JWT 設定
+        var jwtSettings = _config.GetSection("Jwt");
+        var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings["Key"]));
+        var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+
+        // 定義 Claims (Token 中包含的資訊)
+        var claims = new[]
+        {
+            new Claim(JwtRegisteredClaimNames.Sub, username),
+            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+            // 你可以加入自訂的 Claim，例如角色
+            new Claim(ClaimTypes.Role, "Admin"),
+            new Claim("UserId", "12345") 
+        };
+
+        // 建立 Token
+        var token = new JwtSecurityToken(
+            issuer: jwtSettings["Issuer"],
+            audience: jwtSettings["Audience"],
+            claims: claims,
+            expires: DateTime.Now.AddMinutes(120), // Token 過期時間
+            signingCredentials: credentials);
+
+        return new JwtSecurityTokenHandler().WriteToken(token);
+    }
+}
+
+// 簡單的登入模型
+public class UserLogin
+{
+    public string Username { get; set; }
+    public string Password { get; set; }
+}
+```
+
+---
+
+**步驟 5: 保護你的 API 端點**
+
+現在，你可以使用 `[Authorize]` 屬性來保護需要驗證才能存取的 Controller 或 Action。
+
+```csharp
+[ApiController]
+[Route("api/[controller]")]
+public class ProductsController : ControllerBase
+{
+    [HttpGet]
+    [Authorize] // <-- 加在需要保護的 Action 上
+    public IActionResult GetProducts()
+    {
+        // 因為有 [Authorize]，只有攜帶有效 Token 的請求才能進入這裡
+        // 你還可以從 User Claims 中獲取資訊
+        var userId = User.FindFirst("UserId")?.Value;
+        return Ok(new { Message = $"Hello, user {userId}! Here are the products." });
+    }
+
+    [HttpGet("admin")]
+    [Authorize(Roles = "Admin")] // <-- 只有角色為 Admin 的使用者才能存取
+    public IActionResult GetAdminData()
+    {
+        return Ok(new { Message = "This is admin-only data." });
+    }
+    
+    [HttpGet("public")]
+    public IActionResult GetPublicData()
+    {
+        // 這個端點沒有 [Authorize]，任何人都可以存取
+        return Ok(new { Message = "This is public data." });
+    }
+}
+```
+
+---
+
+**客戶端如何使用**
+
+1.  **POST** `https://yourapi.yourdomain.com/api/auth/login` 並附上帳號密碼的 JSON。
+2.  從回應中取得 `token`。
+3.  將 `token` 儲存起來。
+4.  當要請求受保護的資源 (例如 `GET /api/products`) 時，在 HTTP Header 中加入：
+    ```
+    Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9... (很長的 token 字串)
+    ```
+
+這樣就完成了一個標準的 JWT Bearer Token 驗證與授權流程。
+
 ### 3. API 規格文件 (The Core API Documentation)
 
 這是最重要的部分，描述了 API 的所有功能。**最佳實踐是提供一個互動式的 Swagger (OpenAPI) 文件連結**。
