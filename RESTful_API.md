@@ -1,5 +1,31 @@
 # .NET RESTful API 組成詳解
 
+## 目錄
+- [核心元件](#核心元件)
+  - [1. 專案入口點 (Program.cs)](#1-專案入口點-programcs)
+  - [2. 控制器 (Controllers)](#2-控制器-controllers)
+  - [3. 模型 (Models)](#3-模型-models)
+  - [4. 路由 (Routing)](#4-路由-routing)
+  - [5. 中介軟體 (Middleware)](#5-中介軟體-middleware)
+  - [6. 服務 (Services) / 商業邏輯層](#6-服務-services--商業邏輯層)
+  - [7. 依賴注入 (Dependency Injection, DI)](#7-依賴注入-dependency-injection-di)
+  - [8. 設定 (Configuration)](#8-設定-configuration)
+- [請求流程總結](#請求流程總結)
+- [對外公開 vs. 對內運作：餐廳的比喻](#對外公開-vs-對內運作餐廳的比喻)
+  - [A. 對外公開 (Public-Facing Components)](#a-對外公開-public-facing-components)
+  - [B. 對內運作 (Internal Components)](#b-對內運作-internal-components)
+  - [總結](#總結)
+- [提供給第三方的 API 文件與資訊 (Checklist)](#提供給第三方的-api-文件與資訊-checklist)
+  - [1. 環境與存取資訊 (Environment & Access)](#1-環境與存取資訊-environment--access)
+  - [2. 驗證與授權機制 (Authentication & Authorization)](#2-驗證與授權機制-authentication--authorization)
+  - [3. API 規格文件 (The Core API Documentation)](#3-api-規格文件-the-core-api-documentation)
+  - [4. 使用規範與最佳實踐 (Usage Guidelines)](#4-使用規範與最佳實踐-usage-guidelines)
+  - [5. 聯絡與支援方式 (Contact & Support)](#5-聯絡與支援方式-contact--support)
+- [交付物總結](#交付物總結)
+
+---
+
+## 核心元件
 一個典型的 .NET (更精確地說是 ASP.NET Core) RESTful API 主要由以下幾個核心部分組成：
 
 ### 1. **專案入口點 (Program.cs)**
@@ -76,7 +102,9 @@ public class Product
 
 ---
 
-**總結來說，一個 .NET RESTful API 的請求流程大致如下：**
+## 請求流程總結
+
+一個 .NET RESTful API 的請求流程大致如下：
 
 1.  HTTP 請求到達 **Kestrel** (內建的 Web 伺服器)。
 2.  請求進入 **Middleware** 管線 (執行驗證、記錄等)。
@@ -225,7 +253,7 @@ sequenceDiagram
 
 ---
 
-**總結：**
+### 交付物總結
 
 最理想的交付物是一個「**開發者整合包 (Developer Kit)**」，其中包含：
 
