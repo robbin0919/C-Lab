@@ -144,7 +144,7 @@ sequenceDiagram
     participant GPO_MDM as "群組原則(GPO)<br>或 MDM"
     participant Client as "用戶端電腦/瀏覽器"
 
-    %% --- 階段一：憑證建立與部署 (一次性作業) ---
+    Note over Admin, Client: === 階段一：憑證建立與部署 (一次性作業) ===
     Admin->>CA: 1. 建立根私鑰與根憑證 (rootCA.key, rootCA.crt)
     Admin->>WebServer: 2. 為網站建立私鑰與憑證簽署請求 (server.key, server.csr)
     Admin->>CA: 3. 提交 CSR 請求簽章
@@ -155,7 +155,7 @@ sequenceDiagram
     Admin->>GPO_MDM: 6. 部署根憑證 (rootCA.crt)
     GPO_MDM-->>Client: 7. 將根憑證自動安裝到<br>所有用戶端電腦的信任區
 
-    %% --- 階段二：用戶端安全連線 (日常操作) ---
+    Note over Admin, Client: === 階段二：用戶端安全連線 (日常操作) ===
     Client->>WebServer: 8. 使用者瀏覽內部網站 (發起 HTTPS 連線)
     activate WebServer
     WebServer-->>Client: 9. 回應並提供伺服器憑證 (server.crt)
@@ -175,12 +175,16 @@ sequenceDiagram
 
 ### 圖表解說
 
-1.  **階段一 (灰色區塊)**：這是系統管理員需要執行的一次性設定工作。
+此時序圖主要分為兩個階段：
+
+1.  **階段一：憑證建立與部署 (一次性作業)**
+    *   此階段描述了系統管理員的初始設定工作。
     *   管理員先建立一個可信的根源 (Private CA)。
     *   然後為每個網站服務向這個 CA 申請一個專屬憑證。
     *   最重要的一步是，透過 GPO 或 MDM 等管理工具，將這個「根源」的信任關係，強制部署到組織內的所有電腦上。
 
-2.  **階段二 (綠色區塊)**：這是在設定完成後，使用者每天實際發生的連線流程。
+2.  **階段二：用戶端安全連線 (日常操作)**
+    *   此階段描述了在設定完成後，使用者每天實際發生的連線流程。
     *   當使用者瀏覽內部網站時，網站會出示它的憑證。
     *   使用者的瀏覽器會檢查這個憑證，並發現它是由公司內部那個已經被信任的 Private CA 所簽發的。
     *   因為信任鏈完整，驗證通過，瀏覽器便會顯示安全的連線圖示，整個通訊過程都會被加密。
