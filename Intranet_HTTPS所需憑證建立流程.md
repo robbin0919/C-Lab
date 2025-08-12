@@ -132,9 +132,7 @@
 
 ### 流程時序圖
 
-好的，這是一個使用 Mermaid 語法繪製的時序圖 (Sequence Diagram)，清晰地說明了從憑證建立到用戶端安全連線的整個流程。
-
-您可以在支援 Mermaid 的 Markdown 編輯器（例如 VS Code 搭配擴充功能、Typora、GitLab/GitHub 的 Markdown）中貼上這段程式碼，來呈現圖形化的時序圖。
+這時序圖 (Sequence Diagram)，清晰地說明了從憑證建立到用戶端安全連線的整個流程。
 
 ```mermaid
 sequenceDiagram
