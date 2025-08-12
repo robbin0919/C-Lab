@@ -1,6 +1,6 @@
 # 內部網路 (Intranet) HTTPS 所需憑證建立流程
 
-好的，我是 Gemini 2.5 Pro。為內部網路（Intranet）建立啟用 HTTPS 所需的憑證，這是一個常見且重要的資安實踐。核心概念是：你需要**建立一個自己內部的「憑證授權機構」(Certificate Authority, CA)，並讓內部網路中的所有電腦都信任這個 CA**。
+為內部網路（Intranet）建立啟用 HTTPS 所需的憑證，這是一個常見且重要的資安實踐。核心概念是：你需要**建立一個自己內部的「憑證授權機構」(Certificate Authority, CA)，並讓內部網路中的所有電腦都信任這個 CA**。
 
 整個流程可以分為以下幾個主要階段，我會詳細說明每個階段的任務和需要注意的「關卡」。
 
@@ -132,9 +132,7 @@
 
 ### 流程時序圖
 
-好的，這是一個使用 Mermaid 語法繪製的時序圖 (Sequence Diagram)，清晰地說明了從憑證建立到用戶端安全連線的整個流程。
-
-您可以在支援 Mermaid 的 Markdown 編輯器（例如 VS Code 搭配擴充功能、Typora、GitLab/GitHub 的 Markdown）中貼上這段程式碼，來呈現圖形化的時序圖。
+這時序圖 (Sequence Diagram)，清晰地說明了從憑證建立到用戶端安全連線的整個流程。
 
 ```mermaid
 sequenceDiagram
